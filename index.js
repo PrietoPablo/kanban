@@ -19,6 +19,8 @@ const bodyParser = multer();
 
 app.use( bodyParser.none() );
 
+app.use(express.static('./public'));
+
 app.use(router);
 
 app.listen(port, () => {
