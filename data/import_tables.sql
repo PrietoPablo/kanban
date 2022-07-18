@@ -46,6 +46,9 @@ CREATE TABLE "card_has_tag" (
     "updated_at" TIMESTAMPTZ
 );
 
+
+-- here is a little seeding
+
 INSERT INTO "list" ("name", "position")
 VALUES  ('IN PROGRESS', 2),
         ('TO DO', 1);
