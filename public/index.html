@@ -4,8 +4,97 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>kanban</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   
+   <section class="container">
+      <header>
+      <h1 class="title">kanban</h1>
+      </header>
+      <main class="content">
+         <div class="addList">
+            <button id="addListButton">
+               <span index="addListIcon">!O!</span>Ajouter une Liste
+            </button>
+         </div>
+
+         <!--modals-->
+         <div class="modal hidden" id="addListModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <form action="" method="POST">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Ajouter une liste</p>
+                        <button class="delete close" type="button" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                     <div class="field">
+                           <label class="label">Nom</label>
+                           <div class="control">
+                              <input type="text" class="input" name="name" value="" placeholder="Nom de la liste">
+                           </div>
+                     </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                        <button class="button is-success">Save changes</button>
+                        <button class="button close" type="button">Cancel</button>
+                  </footer>
+               </form>
+            </div>
+         </div>
+
+         <!-- list -->
+         <div class="listContainer">
+         </div>
+      </main>
+      <footer></footer>
+
+      <!--template-->
+      <template id="templateList">
+         <!-- list -->
+         <div class="column is-one-quarter panel" data-list-id="">
+             <div class="panel-heading has-background-info">
+                 <div class="columns">
+ 
+                     <div class="column">
+                         <h2 class="has-text-white"></h2>
+ 
+                         <form action="" method="POST" class="is-hidden">
+                             <input type="hidden" name="list_id" value="">
+                             <div class="field has-addons">
+                                 <div class="control">
+                                     <input type="text" class="input is-small" name="name" value=""
+                                         placeholder="Nom de la liste">
+                                 </div>
+                                 <div class="control">
+                                     <button class="button is-small is-success">Valider</button>
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+ 
+                     <div class="column is-narrow">
+                         <a href="#" class="btn-add-card">
+                             <span class="icon is-small has-text-white">
+                                 <i class="fas fa-plus"></i>
+                             </span>
+                         </a>
+                         <a href="#" class="btn-delete-list">
+                             <span class="icon is-small has-text-white">
+                                 <i class="fas fa-trash-alt"></i>
+                             </span>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+             <div class="panel-block is-block has-background-light">
+                 <!-- cards -->
+             </div>
+         </div>
+         <!--/ list -->
+     </template>
+   </section>
+   <script src="./js/app.js"></script>  
 </body>
 </html>

@@ -1,0 +1,12 @@
+.modal {
+   background: green;
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+   display: none;
+}
